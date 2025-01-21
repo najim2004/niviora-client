@@ -11,12 +11,12 @@ export default {
     extend: {
       fontFamily: {
         roboto: ["var(--font-roboto)"],
-        playfair: ["var(--font-playfair)"],
+        merienda: ["var(--font-merienda)"],
       },
       colors: {
-        "primary-text": "#1D1D1D",
+        "primary-text": "#1F2937",
         "secondary-text": "#B6BABF",
-        primary: "#C15F68",
+        primary: "#dc2626",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

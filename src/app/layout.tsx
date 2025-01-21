@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Playfair_Display } from "next/font/google";
+import { Roboto, Merienda } from "next/font/google";
 import "./globals.css";
 import { ReduxProvider } from "@/providers/redux-provider";
 import { Navbar } from "@/components/navbar/navbar";
@@ -11,8 +11,8 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const merienda = Merienda({
+  variable: "--font-merienda",
   subsets: ["latin"],
   display: "swap",
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${playfair.variable} antialiased`}>
+      <body className={`${roboto.variable} ${merienda.variable} antialiased`}>
         <Navbar />
         <ReduxProvider>{children}</ReduxProvider>
       </body>

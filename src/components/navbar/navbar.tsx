@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Add this import
-import { Menu, Heart, UserRound } from "lucide-react";
+import { Menu, Heart, UserRound} from "lucide-react";
 import { FC } from "react";
 
 import {
@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { MdOutlineShoppingBag } from "react-icons/md";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 interface NavigationItem {
   name: string;
@@ -36,19 +37,31 @@ const navigation: NavigationItem[] = [
 
 export const Navbar: FC = () => {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-roboto px-3 2xl:px-0">
-      <div className="h-9 w-full bg-primary/10">
-        <div className="container mx-auto flex h-full items-center justify-center  text-muted-foreground space-x-2">
-          <a href="tel:+8801234567890" className="text-sm hover:text-primary">
-            Hotline: +880 123 456 7890
-          </a>
-          <span>||</span>
-          <a href="mailto:info@niviora.com" className="text-sm hover:text-primary">
-            Email: info@niviora.com
-          </a>
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-roboto">
+      <div className="h-9 w-full bg-rose-500 flex flex-col justify-center">
+        <div className="container mx-auto flex items-center justify-between px-3 2xl:px-0">
+          <div className="flex h-full items-center  text-white space-x-2">
+            <a href="tel:+8801234567890" className="text-sm hover:text-primary-text">
+              Hotline: +880 123 456 7890
+            </a>
+            <span>||</span>
+            <a href="mailto:info@niviora.com" className="text-sm hover:text-primary-text">
+              Email: info@niviora.com
+            </a>
+          </div>
+          <div className="flex items-center text-white space-x-4">
+            <Link href="https://www.facebook.com/niviorabdofficial" target="blank" className="hover:text-primary-text">
+              <span className="sr-only">Facebook</span>
+              <FaFacebook className="h-4 w-4 fill-current" />
+            </Link>
+            <Link href="https://www.instagram.com/niviorabdofficial" target="blank" className="hover:text-primary-text">
+              <span className="sr-only">Instagram</span>
+              <FaInstagram className="h-4 w-4 fill-current" />
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="container mx-auto flex h-16 items-center justify-between">
+        </div>
+      <div className="container mx-auto flex h-16 items-center justify-between  px-3 2xl:px-0">
         <BrandLogo />
         <DesktopNavigation />
         <div className="flex items-center gap-2">
@@ -89,7 +102,7 @@ const MobileNavigation: FC = () => {
               aria-current={pathname === item.href ? "page" : undefined}
               className={cn(
                 "block px-2 py-1 text-lg font-semibold text-secondary-text",
-                pathname === item.href && "active text-primary"
+                pathname === item.href && "text-rose-500"
               )}
             >
               {item.name}
@@ -102,8 +115,8 @@ const MobileNavigation: FC = () => {
 };
 const BrandLogo: FC = () => (
   <Link href="/" className="flex items-center space-x-2 text-primary-text">
-    <span className="text-3xl font-bold">
-      NI<span className="text-primary">VIO</span>RA
+    <span className="text-2xl lg:text-3xl font-bold">
+      NI<span className="text-rose-500">VIO</span>RA
     </span>
   </Link>
 );
@@ -120,8 +133,8 @@ const DesktopNavigation: FC = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-sm font-medium text-secondary-text hover:bg-transparent hover:text-primary",
-                  pathname === item.href && "active text-primary"
+                  "text-sm font-medium text-secondary-text hover:bg-transparent hover:text-rose-500",
+                  pathname === item.href && "text-rose-500"
                 )}
               >
                 {item.name}
@@ -136,15 +149,15 @@ const DesktopNavigation: FC = () => {
 
 const NavigationIcons: FC = () => (
   <div className="flex items-center space-x-2 md:space-x-6">
-    <Link href={"#"} className="hover:bg-transparent">
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
       <Heart className="size-6" />
       <span className="sr-only">Wish list</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent">
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
       <MdOutlineShoppingBag className="size-6" />
       <span className="sr-only">Shopping cart</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent">
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
       <UserRound className="size-6" />
       <span className="sr-only">User account</span>
     </Link>

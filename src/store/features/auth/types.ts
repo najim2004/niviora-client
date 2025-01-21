@@ -1,5 +1,4 @@
 // src/store/features/auth/types.ts
-import { BaseState } from "@/types/shared";
 
 export interface User {
   id: string;
@@ -23,7 +22,7 @@ export enum Permission {
   MANAGE_USERS = "MANAGE_USERS",
 }
 
-export interface AuthState extends BaseState {
+export interface AuthState {
   user: User | null;
   token: string | null;
   isAuthenticated: boolean;
