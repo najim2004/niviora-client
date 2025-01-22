@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Add this import
-import { Menu, Heart, UserRound} from "lucide-react";
+import { Menu, Heart, UserRound } from "lucide-react";
 import { FC } from "react";
+import NivioraLogo from "../../../../public/assets/logo/niviora-logo1.png"
 
 import {
   NavigationMenu,
@@ -20,7 +21,9 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoCartOutline, IoCartSharp } from "react-icons/io5";
+import Image from "next/image";
 
 interface NavigationItem {
   name: string;
@@ -39,34 +42,56 @@ export const Navbar: FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-roboto">
       <div className="h-9 w-full bg-rose-500 flex flex-col justify-center">
-        <div className="container mx-auto flex items-center justify-between px-3 2xl:px-0">
-          <div className="flex h-full items-center  text-white space-x-2">
-            <a href="tel:+8801234567890" className="text-sm hover:text-primary-text">
-              Hotline: +880 123 456 7890
-            </a>
-            <span>||</span>
-            <a href="mailto:info@niviora.com" className="text-sm hover:text-primary-text">
-              Email: info@niviora.com
-            </a>
+        <div className="w-full lg:container mx-auto flex items-center justify-between px-3 2xl:px-0">
+          <div className="flex flex-col sm:flex-row h-full items-center  text-white space-x-2">
+            <p className="text-sm">
+              Hotline:
+              <a href="tel:+8801234567890" className=" hover:text-primary-text transition-all duration-300 ease-in-out">
+                {" "}
+                +880 1533 338930
+              </a>
+            </p>
+            <span className="hidden md:block">||</span>
+            <p className="text-sm">
+              Email:
+              <a
+                href="mailto:info@niviora.com"
+                className=" hover:text-primary-text transition-all duration-300 ease-in-out"
+              >
+                {" "}
+                niviorabd.official@gmail.com
+              </a>
+            </p>
           </div>
-          <div className="flex items-center text-white space-x-4">
-            <Link href="https://www.facebook.com/niviorabdofficial" target="blank" className="hover:text-primary-text">
+          <div className="flex items-center text-white space-x-3">
+            <Link
+              href="https://www.facebook.com/niviorabdofficial"
+              target="blank"
+              className="hover:text-primary-text"
+            >
               <span className="sr-only">Facebook</span>
-              <FaFacebook className="h-4 w-4 fill-current" />
+              <FaFacebook className="h-5 w-5 fill-current" />
             </Link>
-            <Link href="https://www.instagram.com/niviorabdofficial" target="blank" className="hover:text-primary-text">
+            <Link
+              href="https://www.instagram.com/niviorabdofficial"
+              target="blank"
+              className="hover:text-primary-text"
+            >
               <span className="sr-only">Instagram</span>
-              <FaInstagram className="h-4 w-4 fill-current" />
+              <FaInstagram className="h-5 w-5 fill-current" />
             </Link>
           </div>
         </div>
-        </div>
-      <div className="container mx-auto flex h-16 items-center justify-between  px-3 2xl:px-0">
-        <BrandLogo />
-        <DesktopNavigation />
-        <div className="flex items-center gap-2">
-          <NavigationIcons />
-          <MobileNavigation />
+      </div>
+      <div className="border-b border-b-gray-200">
+        <div className="w-full lg:container mx-auto flex h-16 items-center justify-between  px-3 2xl:px-0 ">
+          {/* <BrandLogo /> */}
+          <Image src={NivioraLogo} alt="niviora-logo" width={150} height={150} />
+          <DesktopNavigation />
+          <div className="flex items-center gap-2">
+            <NavigationIcons />
+            <MobileNavigation />
+          </div>
         </div>
       </div>
     </header>
@@ -79,9 +104,7 @@ const MobileNavigation: FC = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button
-          className="px-0 text-base lg:hidden"
-        >
+        <button className="px-0 text-base lg:hidden">
           <Menu className="size-7" />
           <span className="sr-only">Toggle menu</span>
         </button>
@@ -133,7 +156,7 @@ const DesktopNavigation: FC = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-sm font-medium text-secondary-text hover:bg-transparent hover:text-rose-500",
+                  "text-base font-medium text-gray-500 hover:bg-transparent hover:text-rose-500",
                   pathname === item.href && "text-rose-500"
                 )}
               >
@@ -148,17 +171,17 @@ const DesktopNavigation: FC = () => {
 };
 
 const NavigationIcons: FC = () => (
-  <div className="flex items-center space-x-2 md:space-x-6">
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
-      <Heart className="size-6" />
+  <div className="flex items-center space-x-2 md:space-x-5">
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out">
+      <Heart className="size-6 " />
       <span className="sr-only">Wish list</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
-      <MdOutlineShoppingBag className="size-6" />
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-800 transition-all duration-300 ease-in-out">
+      <IoCartOutline className="size-6 " />
       <span className="sr-only">Shopping cart</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary">
-      <UserRound className="size-6" />
+    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out">
+      <UserRound className="size-6 " />
       <span className="sr-only">User account</span>
     </Link>
   </div>
