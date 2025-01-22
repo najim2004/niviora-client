@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Feature {
   id: string;
   title: string;
@@ -8,6 +10,6 @@ export interface BannerProps {
   title: string;
   subtitle: string;
   description: string;
-  productImage: string;
+  productImage: StaticImageData;
   features: Feature[];
 }

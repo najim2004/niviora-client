@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Merienda } from "next/font/google";
 import "./globals.css";
 import { ReduxProvider } from "@/providers/redux-provider";
-import { Navbar } from "@/components/navbar/navbar";
+import { Navbar } from "@/components/shared/navbar/navbar";
 
 const roboto = Roboto({
   variable: "--font-roboto",

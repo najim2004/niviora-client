@@ -1,5 +1,6 @@
-import { Banner } from "@/components/banner/banner";
-import React from "react";;
+import React from "react";
+import { Banner } from "@/components/home/banner/banner";
+import BannerImg from "../../public/assets/home/niviora-banner2.png"
 
 const features = [
   { id: "1", title: "100% Natural" },
@@ -12,7 +13,7 @@ const Home = () => {
       <Banner title="Transform Your Skin"
         subtitle="Personal Skincare"
         description="Discover premium skincare products crafted with love and science to bring out your best self."
-        productImage='https://ik.imagekit.io/golcqzkpl/anua.png?updatedAt=1737472130450'
+        productImage={BannerImg}
         features={features} />
     </>
   );
