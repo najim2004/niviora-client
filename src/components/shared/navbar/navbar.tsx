@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Add this import
 import { Menu, Heart, UserRound } from "lucide-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 import NivioraLogo from "../../../../public/assets/logo/niviora-logo1.png"
 
 import {
@@ -43,7 +43,7 @@ export const Navbar: FC = () => {
       <div className="h-9 w-full bg-rose-500 flex flex-col justify-center">
         <div className="w-full lg:container mx-auto flex items-center justify-between px-3 2xl:px-0">
           <div className="flex flex-col sm:flex-row h-full items-center  text-white space-x-2">
-            <p className="text-sm">
+            <p className="text-xs md:text-sm">
               Hotline:
               <a href="tel:+8801234567890" className=" hover:text-primary-text transition-all duration-300 ease-in-out">
                 {" "}
@@ -51,7 +51,7 @@ export const Navbar: FC = () => {
               </a>
             </p>
             <span className="hidden md:block">||</span>
-            <p className="text-sm">
+            <p className="text-xs md:text-sm">
               Email:
               <a
                 href="mailto:info@niviora.com"
@@ -99,11 +99,12 @@ export const Navbar: FC = () => {
 
 const MobileNavigation: FC = () => {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <Sheet>
+    <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
       <SheetTrigger asChild>
-        <button className="px-0 text-base lg:hidden">
+        <button className="px-0 text-gray-600 hover:text-rose-500 transition-all duration-300 ease-in-out lg:hidden">
           <Menu className="size-7" />
           <span className="sr-only">Toggle menu</span>
         </button>
@@ -113,18 +114,20 @@ const MobileNavigation: FC = () => {
         className="w-[300px] sm:w-[400px]"
         aria-label="Mobile Navigation"
       >
-        {/* Add an accessible title */}
-        <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+        <SheetTitle className="text-xl font-bold text-rose-500 mb-6">
+          Menu
+        </SheetTitle>
 
         <nav className="flex flex-col gap-4">
           {navigation.map((item) => (
             <Link
+              onClick={() => setIsMenuOpen(false)}
               key={item.name}
               href={item.href}
               aria-current={pathname === item.href ? "page" : undefined}
               className={cn(
-                "block px-2 py-1 text-lg font-semibold text-secondary-text",
-                pathname === item.href && "text-rose-500"
+                "block px-2 py-2 text-lg font-medium text-gray-600 hover:text-rose-500 transition-all duration-300 ease-in-out",
+                pathname === item.href && "text-rose-500 font-semibold"
               )}
             >
               {item.name}
