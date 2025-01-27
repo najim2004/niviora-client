@@ -14,7 +14,7 @@ export const Banner = ({
   features,
 }: BannerProps) => {
   return (
-    <section className="relative bg-background lg:container mx-auto lg:h-[calc(100vh-105px)] flex flex-col md:flex-row justify-between items-center font-roboto gap-6 md:gap-10 lg:gap-36 mt-8 lg:mt-0 px-4">
+    <section className="overflow-hidden relative bg-background lg:container mx-auto lg:h-[calc(100vh-105px)] flex flex-col md:flex-row justify-between items-center font-roboto gap-6 md:gap-10 lg:gap-36 mt-8 lg:mt-0 px-4">
       {/* Left Content */}
       <Card className="border-none shadow-none bg-transparent w-full lg:w-1/2">
         <CardContent className="space-y-6 p-0">

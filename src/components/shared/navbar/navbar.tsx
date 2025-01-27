@@ -150,7 +150,7 @@ const DesktopNavigation: FC = () => {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "text-base font-medium text-gray-500 hover:bg-transparent hover:text-rose-500",
+                  "text-base font-medium text-gray-500 active:bg-transparent bg-transparent hover:bg-transparent hover:text-rose-500",
                   pathname === item.href && "text-rose-500"
                 )}
               >

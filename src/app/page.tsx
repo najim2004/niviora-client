@@ -1,6 +1,7 @@
 import React from "react";
 import { Banner } from "@/components/home/banner/banner";
 import BannerImg from "../../public/assets/home/niviora-banner2.png"
+import StatsSection from "@/components/home/stats/stats";
 
 const features = [
   { id: "1", title: "100% Natural" },
@@ -15,6 +16,7 @@ const Home = () => {
         description="Discover premium skincare products crafted with love and science to bring out your best self."
         productImage={BannerImg}
         features={features} />
+      <StatsSection/>
     </>
   );
 };
