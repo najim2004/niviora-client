@@ -20,9 +20,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { IoCartOutline, IoCartSharp } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
 import Image from "next/image";
 
 interface NavigationItem {
@@ -136,14 +135,6 @@ const MobileNavigation: FC = () => {
     </Sheet>
   );
 };
-const BrandLogo: FC = () => (
-  <Link href="/" className="flex items-center space-x-2 text-primary-text">
-    <span className="text-2xl lg:text-3xl font-bold">
-      NI<span className="text-rose-500">VIO</span>RA
-    </span>
-  </Link>
-);
-
 const DesktopNavigation: FC = () => {
   const pathname = usePathname();
 
