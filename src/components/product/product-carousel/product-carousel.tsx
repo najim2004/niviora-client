@@ -25,11 +25,11 @@ export default function ProductCarousel() {
                 }}
                 className="w-full"
             >
-                <CarouselContent>
+                <CarouselContent className="">
                     {products.map((product) => (
                         <CarouselItem 
                             key={product.id} 
-                            className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                            className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                         >
                             <div className="flex justify-center items-center">
                                 <ProductCard
@@ -42,8 +42,8 @@ export default function ProductCarousel() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
+                <CarouselPrevious className="hidden sm:flex left-0 lg:-left-5" />
+                <CarouselNext className="hidden sm:flex right-0 lg:-right-5" />
             </Carousel>
         </section>
     )

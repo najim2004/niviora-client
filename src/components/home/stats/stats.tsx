@@ -9,7 +9,7 @@ interface StatItemProps {
 
 const StatItem: FC<StatItemProps> = ({ title, subtitle, isRating = false }) => (
     <div className="space-y-2 transition-all duration-300 hover:transform hover:scale-105 text-center">
-        <h2 className="text-4xl font-bold text-primary-text lg:text-white md:text-5xl">{title}</h2>
+        <h2 className="text-4xl font-bold text-primary-text md:text-white md:text-5xl">{title}</h2>
         {isRating && (
             <div className="flex justify-center space-x-1">
                 {[...Array(4)].map((_, i) => (
@@ -25,7 +25,7 @@ const StatItem: FC<StatItemProps> = ({ title, subtitle, isRating = false }) => (
                 />
             </div>
         )}
-        <p className="text-xl text-primary-text lg:text-white/90">{subtitle}</p>
+        <p className="text-xl text-primary-text md:text-white/90">{subtitle}</p>
     </div>
 );
 
@@ -47,7 +47,7 @@ const StatsSection: FC = () => {
     ];
 
     return (
-        <section className="w-full lg:bg-[#632727] py-5 mt-10 md:mt-0">
+        <section className="w-full md:bg-[#632727] py-5 mt-10 md:mt-5">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12 items-center">
                     {stats.map((stat, index) => (
