@@ -2,6 +2,7 @@ import React from "react";
 import { Banner } from "@/components/home/banner/banner";
 import BannerImg from "../../public/assets/home/niviora-banner2.png"
 import StatsSection from "@/components/home/stats/stats";
+import ProductCarousel from "@/components/product/product-carousel/product-carousel";
 
 const features = [
   { id: "1", title: "100% Natural" },
@@ -17,6 +18,7 @@ const Home = () => {
         productImage={BannerImg}
         features={features} />
       <StatsSection/>
+      <ProductCarousel/>
     </>
   );
 };

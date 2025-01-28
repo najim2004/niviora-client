@@ -47,7 +47,7 @@ const StatsSection: FC = () => {
     ];
 
     return (
-        <section className="w-full lg:bg-[#632727] py-5">
+        <section className="w-full lg:bg-[#632727] py-5 mt-10 md:mt-0">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12 items-center">
                     {stats.map((stat, index) => (
