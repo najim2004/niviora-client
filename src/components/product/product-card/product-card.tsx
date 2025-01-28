@@ -7,16 +7,16 @@ import Image from "next/image";
 import { FC, useState } from "react";
 import { ProductCardProps } from "./types";
 
-export const ProductCard: FC<ProductCardProps>=({
+export const ProductCard: FC<ProductCardProps> = ({
   title = "Ahava Mineral Hand Cream - Sea-Kissed",
   price = 24.0,
   originalPrice = 28.0,
   imageUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ILenJQVlZPeq6ishtv2ykINbWARIL3.png",
-})=> {
+}) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <Card className="w-full max-w-[300px] h-[450px] overflow-hidden hover:border-gray-400">
+    <Card className="w-full max-w-[300px] h-[450px] overflow-hidden border-gray-300 hover:shadow-lg mb-10">
       <CardContent className="p-4 flex flex-col h-full">
         <div className="relative flex-grow">
           <button
@@ -50,11 +50,14 @@ export const ProductCard: FC<ProductCardProps>=({
               ${originalPrice.toFixed(2)}
             </span>
           </div>
-          <Button className="w-full rounded-full hover:bg-primary active:bg-primary hover:text-white" variant="outline">
+          <Button
+            className="w-full font-semibold rounded-full hover:bg-primary active:bg-primary hover:text-white"
+            variant="outline"
+          >
             Add to cart
           </Button>
         </div>
       </CardContent>
     </Card>
   );
-}
+};
