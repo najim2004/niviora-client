@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { products } from "@/components/product/product-carousel/temp-products";
 import { ProductCard } from "@/components/product/product-card/product-card";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 const categories = [
   { value: "popular", label: "Popular" },
@@ -15,16 +16,13 @@ const categories = [
 
 export default function Bestsellers() {
   return (
-    <section className="mt-10 lg:mt-20 px-4 container mx-auto font-roboto">
+    <section className="py-10 lg:py-16 px-4 container mx-auto font-roboto">
       {/* Title Section */}
-      <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold">
-          Explore Our <span className="text-rose-500">Bestsellers</span>
-        </h2>
-        <p className="text-muted-foreground text-lg">
-          Handpicked favorites designed to elevate your skincare routine.
-        </p>
-      </div>
+      <SectionHeader
+        firstTitle="Explore Our"
+        lastTitle="Bestsellers"
+        description="Handpicked favorites designed to elevate your skincare routine."
+      />
 
       {/* Categories Tabs */}
       <div className="mb-8 flex gap-8 justify-between">

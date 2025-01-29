@@ -1,19 +1,21 @@
 import React from "react";
 
 const SectionHeader = ({
-  title,
+  firstTitle,
+  lastTitle,
   description,
 }: {
-  title: string;
+  firstTitle: string;
+  lastTitle: string;
   description: string;
 }) => {
   return (
-    <header className="container mx-auto px-4 py-12 md:py-16">
-      <div className="grid gap-6 md:grid-cols-2 md:gap-12 items-start">
-        <h2 className="max-w-40 lg:max-w-60 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-          {title}
-        </h2>
-        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl md:ml-auto">
+    <header className="container mx-auto px-5 py-4 md:py-12">
+      <div className="flex flex-col justify-center text-center px-4 md:px-0">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-text mb-4 animate-fade-in">
+          {firstTitle} <span className="text-rose-500">{lastTitle}</span>
+        </h3>
+        <p className="text-base md:text-lg text-secondary-text leading-relaxed max-w-2xl mx-auto">
           {description}
         </p>
       </div>
