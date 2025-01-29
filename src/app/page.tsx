@@ -4,6 +4,7 @@ import BannerImg from "../../public/assets/home/niviora-banner2.png"
 import StatsSection from "@/components/home/stats/stats";
 import ProductCarousel from "@/components/product/product-carousel/product-carousel";
 import { WhyChooseUs } from '../components/home/why-choose-us/why-choose-us';
+import { TrustedBrands } from "@/components/home/trusted-brands/trusted-brands";
 
 const features = [
   { id: "1", title: "100% Natural" },
@@ -21,6 +22,7 @@ const Home = () => {
       <StatsSection/>
       <ProductCarousel/>
       <WhyChooseUs/>
+      <TrustedBrands/>
     </>
   );
 };

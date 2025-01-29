@@ -23,8 +23,8 @@ export const WhyChooseUs: FC = () => {
                     <FaAward />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold mb-1">Best Quality</h3>
-                    <p className="text-gray-600">100% Genuine Products</p>
+                    <h3 className="text-xl font-semibold text-primary-text mb-1">Best Quality</h3>
+                    <p className="text-secondary-text">100% Genuine Products</p>
                   </div>
                 </div>
               </CardContent>
@@ -39,10 +39,10 @@ export const WhyChooseUs: FC = () => {
                     <FaShippingFast />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold mb-1">
+                    <h3 className="text-xl font-semibold text-primary-text mb-1">
                       Fast Shipping
                     </h3>
-                    <p className="text-gray-600">Quick & Safe Delivery</p>
+                    <p className="text-secondary-text">Quick & Safe Delivery</p>
                   </div>
                 </div>
               </CardContent>
@@ -57,8 +57,8 @@ export const WhyChooseUs: FC = () => {
                     <FaShieldAlt />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold mb-1">Warranty</h3>
-                    <p className="text-gray-600">100% Return Guarantee</p>
+                    <h3 className="text-xl font-semibold text-primary-text mb-1">Warranty</h3>
+                    <p className="text-secondary-text">100% Return Guarantee</p>
                   </div>
                 </div>
               </CardContent>
