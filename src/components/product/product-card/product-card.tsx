@@ -21,14 +21,14 @@ export const ProductCard: FC<ProductCardProps> = ({
         <div className="relative flex-grow">
           <button
             onClick={() => setIsFavorite(!isFavorite)}
-            className="absolute left-0 top-0 z-10 p-2 transition-colors hover:text-primary"
+            className="absolute left-0 top-0 z-10 p-2 transition-colors group"
             aria-label={
               isFavorite ? "Remove from favorites" : "Add to favorites"
             }
           >
             <Heart
-              className={`h-5 w-5 ${
-                isFavorite ? "fill-current text-primary" : "text-gray-400"
+              className={`h-5 w-5 group-hover:text-primary ${
+                isFavorite ? "fill-current text-rose-500" : "text-gray-400"
               }`}
             />
           </button>
@@ -46,12 +46,12 @@ export const ProductCard: FC<ProductCardProps> = ({
           <h3 className="text-sm font-medium text-gray-900">{title}</h3>
           <div className="flex items-center gap-2">
             <span className="text-lg font-bold">${price.toFixed(2)}</span>
-            <span className="text-sm text-primary line-through">
+            <span className="text-sm text-rose-500 line-through">
               ${originalPrice.toFixed(2)}
             </span>
           </div>
           <Button
-            className="w-full font-semibold rounded-full hover:bg-primary active:bg-primary hover:text-white"
+            className="w-full font-semibold rounded-full hover:bg-rose-500 active:bg-rose-500 hover:text-white"
             variant="outline"
           >
             Add to cart
