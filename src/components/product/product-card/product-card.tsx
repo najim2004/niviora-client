@@ -51,7 +51,7 @@ export const ProductCard: FC<ProductCardProps> = ({
             </span>
           </div>
           <Button
-            className="w-full font-semibold rounded-full hover:bg-rose-500 active:bg-rose-500 hover:text-white"
+            className="w-full font-semibold rounded-md hover:bg-rose-500 active:bg-rose-500 hover:text-white"
             variant="outline"
           >
             Add to cart

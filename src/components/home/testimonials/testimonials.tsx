@@ -2,17 +2,18 @@
 
 import { useEffect, useState } from "react";
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-    type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { TestimonialCard } from "./testimonial-card";
 import { testimonials } from "./temp-testimonials";
 import { cn } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
+import SectionHeader from "@/components/shared/SectionHeader";
 export default function Testimonials() {
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
@@ -30,17 +31,14 @@ export default function Testimonials() {
   }, [api]);
 
   return (
-    <section className="py-16 px-4 container mx-auto">
+    <section className="py-10 lg:py-16 px-4 container mx-auto">
       {/* Title Section */}
-      <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight">
-          Why Customers Trust Us
-        </h2>
-        <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-          Our customers are at the heart of everything we do. Discover what they
-          say about their experience with our products and services.
-        </p>
-      </div>
+      <SectionHeader
+        firstTitle="Why Customers"
+        lastTitle="Trust Us"
+        description="Our customers are at the heart of everything we do. Discover what they
+          say about their experience with our products and services."
+      />
 
       {/* Carousel Section */}
       <div className="relative px-4 sm:px-6 lg:px-8">

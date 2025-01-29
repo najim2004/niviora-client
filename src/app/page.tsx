@@ -1,9 +1,9 @@
 import React from "react";
 import { Banner } from "@/components/home/banner/banner";
-import BannerImg from "../../public/assets/home/niviora-banner2.png"
+import BannerImg from "../../public/assets/home/niviora-banner2.png";
 import StatsSection from "@/components/home/stats/stats";
 import ProductCarousel from "@/components/product/product-carousel/product-carousel";
-import { WhyChooseUs } from '../components/home/why-choose-us/why-choose-us';
+import { WhyChooseUs } from "../components/home/why-choose-us/why-choose-us";
 import { TrustedBrands } from "@/components/home/trusted-brands/trusted-brands";
 import Bestsellers from "@/components/home/bestsellers/bestsellers";
 import Testimonials from "@/components/home/testimonials/testimonials";
@@ -16,17 +16,19 @@ const features = [
 const Home = () => {
   return (
     <>
-      <Banner title="Transform Your Skin"
+      <Banner
+        title="Transform Your Skin"
         subtitle="Personal Skincare"
         description="Discover premium skincare products crafted with love and science to bring out your best self."
         productImage={BannerImg}
-        features={features} />
-      <StatsSection/>
-      <ProductCarousel/>
-      <WhyChooseUs/>
-      <TrustedBrands/>
-      <Bestsellers/>
-      <Testimonials/>
+        features={features}
+      />
+      <StatsSection />
+      <WhyChooseUs />
+      <ProductCarousel />
+      <TrustedBrands />
+      <Bestsellers />
+      <Testimonials />
     </>
   );
 };

@@ -14,7 +14,6 @@ import { ProductCard } from "../product-card/product-card";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function ProductCarousel() {
-  
   const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -31,9 +30,10 @@ export default function ProductCarousel() {
   }, [api]);
 
   return (
-    <section className="container mx-auto px-4 mt-10 lg:mt-20">
+    <section className="container mx-auto px-4 sm:px-10 mt-10 lg:mt-20">
       <SectionHeader
-        title={"Our Star Products"}
+        firstTitle={"Premium"}
+        lastTitle={"Skincare"}
         description={
           "Discover our range of premium skincare products crafted with love and science to bring out your best self."
         }
@@ -54,7 +54,7 @@ export default function ProductCarousel() {
                 key={product.id}
                 className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center pb-5">
                   <ProductCard
                     title={product.title}
                     price={product.price}

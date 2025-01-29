@@ -1,5 +1,6 @@
-import Image from "next/image"
-import { FC } from "react"
+import SectionHeader from "@/components/shared/SectionHeader";
+import Image from "next/image";
+import { FC } from "react";
 
 export const TrustedBrands: FC = () => {
   const brands = [
@@ -26,26 +27,23 @@ export const TrustedBrands: FC = () => {
   ];
 
   return (
-    <section className="mt-10 lg:mt-20 px-4 font-roboto">
+    <section className="py-10 lg:py-16 px-4 font-roboto">
       <div className="container mx-auto">
-        <div className="flex flex-col justify-center text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-primary-text mb-6 
-            animate-fade-in tracking-tight">
-            Trusted by <span className="text-rose-500">Leading Brands</span>
-          </h2>
-          <p className="text-lg text-secondary-text leading-relaxed mb-12 
-            max-w-2xl mx-auto">
-            Niviora is proud to collaborate with industry-leading partners to bring
-            you the best in skincare.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 
-          items-center justify-items-center">
+        <SectionHeader
+          firstTitle="Trusted By"
+          lastTitle="Leading Brands"
+          description="Niviora is proud to collaborate with industry-leading partners to
+            bring you the best in skincare."
+        />
+
+        <div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 
+          items-center justify-items-center"
+        >
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className="w-full max-w-[160px] aspect-[3/2] relative group 
+              className="w-full max-w-[160px] mx-auto aspect-[3/2] relative group 
                 transition-all duration-300 ease-in-out"
             >
               <Image
@@ -63,4 +61,4 @@ export const TrustedBrands: FC = () => {
       </div>
     </section>
   );
-}
+};
