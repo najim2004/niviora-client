@@ -5,6 +5,7 @@ import StatsSection from "@/components/home/stats/stats";
 import ProductCarousel from "@/components/product/product-carousel/product-carousel";
 import { WhyChooseUs } from '../components/home/why-choose-us/why-choose-us';
 import { TrustedBrands } from "@/components/home/trusted-brands/trusted-brands";
+import Bestsellers from "@/components/home/bestsellers/bestsellers";
 
 const features = [
   { id: "1", title: "100% Natural" },
@@ -23,6 +24,7 @@ const Home = () => {
       <ProductCarousel/>
       <WhyChooseUs/>
       <TrustedBrands/>
+      <Bestsellers/>
     </>
   );
 };

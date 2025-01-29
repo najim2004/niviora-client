@@ -6,8 +6,8 @@ export const WhyChooseUs: FC = () => {
     return (
       <div className="container mx-auto font-roboto mt-10 lg:mt-20">
         <div className="flex flex-col justify-center text-center px-4 md:px-0">
-          <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary-text mb-4 animate-fade-in">
-            Why Choose Our Brand
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-text mb-4 animate-fade-in">
+            Why Choose <span className="text-rose-500">Our Brand</span>
           </h3>
           <p className="text-base md:text-lg text-secondary-text leading-relaxed max-w-2xl mx-auto">
             We deliver exceptional quality solutions with personalized service
