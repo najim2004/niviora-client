@@ -21,7 +21,7 @@ export default function RegisterPage() {
         <p className="mt-2 text-center text-sm text-gray-600">
           Or{" "}
           <Link
-            href="/register"
+            href="/login"
             className="font-medium text-primary hover:text-primary/90"
           >
             login to your account
