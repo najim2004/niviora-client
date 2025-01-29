@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // Add this import
 import { Menu, Heart, UserRound } from "lucide-react";
 import { FC, useState } from "react";
-import NivioraLogo from "../../../../public/assets/logo/niviora-logo1.png"
+import NivioraLogo from "../../../../public/assets/logo/niviora-logo1.png";
 
 import {
   NavigationMenu,
@@ -42,10 +42,13 @@ export const Navbar: FC = () => {
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-roboto">
       <div className="h-9 w-full bg-rose-500 flex flex-col justify-center">
         <div className="w-full lg:container mx-auto flex items-center justify-between px-3 2xl:px-0">
-          <div className="flex flex-col sm:flex-row h-full items-center  text-white space-x-2">
+          <div className="flex flex-col sm:flex-row h-full sm:items-center  text-white gap-x-2">
             <p className="text-xs md:text-sm">
               Hotline:
-              <a href="tel:+8801234567890" className=" hover:text-primary-text transition-all duration-300 ease-in-out">
+              <a
+                href="tel:+8801234567890"
+                className=" hover:text-primary-text transition-all duration-300 ease-in-out"
+              >
                 {" "}
                 +880 1533 338930
               </a>
@@ -85,7 +88,12 @@ export const Navbar: FC = () => {
       <div className="border-b border-b-gray-200">
         <div className="w-full lg:container mx-auto flex h-16 items-center justify-between  px-3 2xl:px-0 ">
           {/* <BrandLogo /> */}
-          <Image src={NivioraLogo} alt="niviora-logo" width={150} height={150} />
+          <Image
+            src={NivioraLogo}
+            alt="niviora-logo"
+            width={150}
+            height={150}
+          />
           <DesktopNavigation />
           <div className="flex items-center gap-2">
             <NavigationIcons />
@@ -166,15 +174,24 @@ const DesktopNavigation: FC = () => {
 
 const NavigationIcons: FC = () => (
   <div className="flex items-center space-x-2 md:space-x-5">
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out">
+    <Link
+      href={"#"}
+      className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out"
+    >
       <Heart className="size-6 " />
       <span className="sr-only">Wish list</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-800 transition-all duration-300 ease-in-out">
+    <Link
+      href={"#"}
+      className="hover:bg-transparent hover:text-primary text-gray-800 transition-all duration-300 ease-in-out"
+    >
       <IoCartOutline className="size-6 " />
       <span className="sr-only">Shopping cart</span>
     </Link>
-    <Link href={"#"} className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out">
+    <Link
+      href={"/login"}
+      className="hover:bg-transparent hover:text-primary text-gray-600 transition-all duration-300 ease-in-out"
+    >
       <UserRound className="size-6 " />
       <span className="sr-only">User account</span>
     </Link>
