@@ -40,7 +40,7 @@ const navigation: NavigationItem[] = [
 export const Navbar: FC = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 font-roboto">
-      <div className="h-9 w-full bg-rose-500 flex flex-col justify-center">
+      <div className="h-9 w-full bg-rose-600 flex flex-col justify-center">
         <div className="w-full lg:container mx-auto flex items-center justify-between px-3 2xl:px-0">
           <div className="flex flex-col sm:flex-row h-full sm:items-center  text-white gap-x-2">
             <p className="text-xs md:text-sm">
@@ -88,12 +88,14 @@ export const Navbar: FC = () => {
       <div className="border-b border-b-gray-200">
         <div className="w-full lg:container mx-auto flex h-16 items-center justify-between  px-3 2xl:px-0 ">
           {/* <BrandLogo /> */}
-          <Image
-            src={NivioraLogo}
-            alt="niviora-logo"
-            width={150}
-            height={150}
-          />
+          <Link href="/">
+            <Image
+              src={NivioraLogo}
+              alt="niviora-logo"
+              width={150}
+              height={150}
+            />
+          </Link>
           <DesktopNavigation />
           <div className="flex items-center gap-2">
             <NavigationIcons />
