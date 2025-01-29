@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -13,7 +14,8 @@ import { ProductCard } from "../product-card/product-card";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function ProductCarousel() {
-  const [api, setApi] = useState<any>();
+  
+  const [api, setApi] = useState<CarouselApi | null>(null);
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
