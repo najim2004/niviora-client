@@ -13,7 +13,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function ProductCarousel() {
   return (
-    <section className="container mx-auto px-4 my-10 lg:my-20">
+    <section className="container mx-auto px-4 mt-10 lg:mt-20">
       <SectionHeader
         title={"Our Star Products"}
         description={

@@ -15,7 +15,7 @@ export default {
       },
       colors: {
         "primary-text": "#1F2937",
-        "secondary-text": "#B6BABF",
+        "secondary-text": "#9A9AA1",
         primary: "#f43f5e",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
