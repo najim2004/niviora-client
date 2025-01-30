@@ -70,8 +70,8 @@ export default function Testimonials() {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="hidden sm:flex absolute -left-4 lg:-left-8 bottom-10px" />
-          <CarouselNext className="hidden sm:flex absolute -right-4 lg:-right-8 bottom-10px" />
+          <CarouselPrevious className="hidden sm:flex absolute -left-4 lg:-left-8 bottom-1/2" />
+          <CarouselNext className="hidden sm:flex absolute -right-4 lg:-right-8 bottom-1/2" />
         </Carousel>
 
         {/* Pagination */}
