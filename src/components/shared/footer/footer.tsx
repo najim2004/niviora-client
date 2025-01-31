@@ -8,7 +8,6 @@ import type React from "react"; // Added import for React
 import { FC } from "react";
 import logo from "../../../../public/assets/logo/niviora-logo1.png";
 import Image from "next/image";
-import PrimaryButton from "../Button/PrimaryButton";
 
 export const Footer: FC = () => {
   const handleCallback = (e: React.FormEvent) => {
