@@ -30,7 +30,7 @@ export default function ProductCarousel() {
   }, [api]);
 
   return (
-    <section className="container mx-auto px-4 sm:px-10 mt-10 lg:mt-20">
+    <section className="container mx-auto px-4 mt-10 lg:mt-20">
       <SectionHeader
         firstTitle={"Premium"}
         lastTitle={"Skincare"}
@@ -65,8 +65,8 @@ export default function ProductCarousel() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex left-0 lg:-left-5" />
-          <CarouselNext className="hidden sm:flex right-0 lg:-right-5" />
+          <CarouselPrevious className="absolute size-12  hidden sm:flex left-0 lg:-left-5" />
+          <CarouselNext className="absolute size-12  hidden sm:flex right-0 lg:-right-5" />
         </Carousel>
 
         {/* Pagination dots */}

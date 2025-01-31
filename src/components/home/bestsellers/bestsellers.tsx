@@ -26,7 +26,7 @@ export default function Bestsellers() {
 
       {/* Categories Tabs */}
       <div className="mb-8 flex gap-8 justify-between">
-        <Tabs defaultValue="serums" className="w-full overflow-auto">
+        <Tabs defaultValue="serums" className="w-full overflow-auto pb-2">
           <TabsList className="w-full justify-start gap-8 h-auto bg-transparent rounded-none p-0">
             {categories.map((category) => (
               <TabsTrigger
@@ -53,9 +53,9 @@ export default function Bestsellers() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.slice(0, 8).map((product) => (
-          <div className="mx-auto" key={product.id}>
+          <div className="flex justify-center" key={product.id}>
             <ProductCard
               title={product.title}
               price={product.price}

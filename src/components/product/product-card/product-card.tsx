@@ -16,7 +16,7 @@ export const ProductCard: FC<ProductCardProps> = ({
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <Card className="w-[300px] h-[450px] overflow-hidden border-gray-300 hover:shadow-lg font-roboto">
+    <Card className="max-w-[300px] w-full h-[450px] overflow-hidden border-gray-300 hover:shadow-lg font-roboto">
       <CardContent className="p-4 flex flex-col h-full">
         <div className="relative flex-grow">
           <button

@@ -41,7 +41,7 @@ export default function Testimonials() {
       />
 
       {/* Carousel Section */}
-      <div className="relative px-4 sm:px-6 lg:px-8">
+      <div className="relative px-4">
         <Carousel
           setApi={setApi}
           opts={{
@@ -61,9 +61,9 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <CarouselItem
                 key={testimonial.id}
-                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pt-14"
+                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/4 pt-14"
               >
-                <div className="h-full">
+                <div className="h-full mb-2">
                   <TestimonialCard testimonial={testimonial} />
                 </div>
               </CarouselItem>
@@ -75,7 +75,7 @@ export default function Testimonials() {
         </Carousel>
 
         {/* Pagination */}
-        <div className="mt-8 flex justify-center gap-2">
+        <div className="mt-4 flex justify-center gap-2">
           {Array.from({ length: count }).map((_, i) => (
             <button
               key={i}
