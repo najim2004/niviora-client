@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { FC, useState } from "react";
 import { ProductCardProps } from "./types";
-import PrimaryButton from "@/components/shared/Button/PrimaryButton";
 
 export const ProductCard: FC<ProductCardProps> = ({
   title = "Ahava Mineral Hand Cream - Sea-Kissed",
