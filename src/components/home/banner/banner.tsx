@@ -37,7 +37,12 @@ export const Banner = ({
           </div>
 
           <div className="flex items-center justify-center gap-4 lg:gap-6">
-            <PrimaryButton text={"Shop Now"} />
+            <PrimaryButton
+              text={"Shop Now"}
+              width={"w-36"}
+              height={"h-12"}
+              paddingY={"py-3"}
+            />
             <SecondaryButton text={"Wishlist"} />
           </div>
 

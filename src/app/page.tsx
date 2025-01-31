@@ -29,8 +29,8 @@ const Home = () => {
       <ProductCarousel />
       <TrustedBrands />
       <Bestsellers />
+      <Newsletter />
       <Testimonials />
-      <Newsletter/>
     </>
   );
 };
