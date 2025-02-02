@@ -68,7 +68,7 @@ export const Banner = ({
       {/* Right Content */}
       <Card className="bg-transparent border-none shadow-none w-full h-full">
         <CardContent className="p-0 mx-auto h-full flex items-center justify-center">
-          <div className="relative w-full max-w-[500px]  h-[300px] md:h-[500px] lg:max-h-[650px] lg:h-full overflow-hidden rounded-[10%] shadow-lg">
+          <div className="relative w-full max-w-[500px]  h-[300px] md:h-[500px] lg:max-h-[650px] lg:h-full overflow-hidden rounded-[10%]">
             <Image
               src={productImage}
               alt="Product showcase"
