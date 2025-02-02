@@ -14,9 +14,8 @@ export const Banner = ({
   features,
 }: BannerProps) => {
   return (
-    <section className="overflow-hidden relative bg-background lg:container mx-auto lg:h-[calc(100vh-105px)] flex flex-col md:flex-row justify-between items-center font-roboto gap-6 md:gap-10 lg:gap-36 mt-8 lg:mt-0 px-4">
-      {/* Left Content */}
-      <Card className="border-none shadow-none bg-transparent w-full lg:w-1/2">
+    <section className="overflow-hidden container mx-auto lg:min-h-[calc(100vh-105px)] grid grid-cols-1 md:grid-cols-2 justify-between items-center font-roboto gap-6 md:gap-8  lg:mt-0 py-6 px-4">
+      <Card className="border-none shadow-none bg-transparent w-full">
         <CardContent className="space-y-6 p-0">
           <div className="space-y-2 md:space-y-4 flex flex-col items-center text-center lg:text-start">
             <p className="text-primary-text text-base lg:font-semibold text-center">
@@ -67,22 +66,18 @@ export const Banner = ({
       </Card>
 
       {/* Right Content */}
-      <div className="relative h-full w-full lg:w-1/2">
-        {/* Product image container */}
-        <Card className="relative bg-transparent border-none shadow-none w-full h-full flex items-center p-0">
-          <CardContent className="p-0 mx-auto">
-            <div className="relative aspect-[3.5/4] w-full max-w-[800px] h-[300px] md:h-[500px] lg:h-[650px] overflow-hidden">
-              <Image
-                src={productImage}
-                alt="Product showcase"
-                fill
-                priority
-                className="object-contain rounded-[200px]"
-              />
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      <Card className="bg-transparent border-none shadow-none w-full h-full">
+        <CardContent className="p-0 mx-auto h-full flex items-center justify-center">
+          <div className="relative w-full max-w-[500px]  h-[300px] md:h-[500px] lg:max-h-[650px] lg:h-full overflow-hidden rounded-[10%] shadow-lg">
+            <Image
+              src={productImage}
+              alt="Product showcase"
+              
+              className="object-content"
+            />
+          </div>
+        </CardContent>
+      </Card>
     </section>
   );
 };
