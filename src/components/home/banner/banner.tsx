@@ -72,7 +72,7 @@ export const Banner = ({
             <Image
               src={productImage}
               alt="Product showcase"
-              
+              fill
               className="object-content"
             />
           </div>
